@@ -23,7 +23,7 @@ const MySkills = () => {
                     <p className="font-playfair font-semibold text-4xl mb-5">
                         MY <span className="text-red">SKILLS</span>
                     </p>
-                    <LineGradient width="w-1/3"/>
+                    <LineGradient width="w-1/3 md:w-2/3"/>
                     <p className="mt-10 mb-7">
                         Jake of all trades, master of none.
                     </p>
@@ -65,7 +65,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:bg-blue before:h-32 before:right-0 before:top-0 before:z-[-1]">
+                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:max-w-[200px] before:bg-blue before:h-32 before:right-0 before:top-0 before:z-[-1]">
                         <div className="z-10 ">
                             <p className="font-playfair font-semibold text-5xl">01</p>
                             <p className="font-playfair font-semibold text-3xl mt-3">Experience</p>
@@ -89,7 +89,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:bg-red before:h-32 before:right-0 before:top-0 before:z-[-1]">
+                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:max-w-[200px] before:bg-red before:h-32 before:right-0 before:top-0 before:z-[-1]">
                         <div className="z-10">
                             <p className="font-playfair font-semibold text-5xl">02</p>
                             <p className="font-playfair font-semibold text-3xl mt-3">Innovative</p>
@@ -112,7 +112,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:bg-yellow before:h-32 before:right-0 before:top-0 before:z-[-1]">
+                    <div className="relative h-32 before:w-1/2 before:absolute before:md:w-3/4 before:left-14 before:max-w-[200px] before:bg-yellow before:h-32 before:right-0 before:top-0 before:z-[-1]">
                         <div className="z-10">
                             <p className="font-playfair font-semibold text-5xl">03</p>
                             <p className="font-playfair font-semibold text-3xl mt-3">Imaginative</p>
