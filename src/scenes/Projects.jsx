@@ -40,7 +40,7 @@ const Projects = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 3.0 }}
                 variants={{
-                    hidden: { opacity: 0, y: -50 },
+                    hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0 }
                 }}
             >
