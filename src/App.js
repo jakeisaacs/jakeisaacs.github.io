@@ -5,6 +5,7 @@ import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
 import Experience from "./scenes/Experience";
 import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 import { useEffect, useState } from "react";
 import LineGradient from "./components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -48,13 +49,14 @@ function App() {
         <Projects />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-1/2">
+      <div className="w-5/6 mx-auto h-5/6">
         <Experience />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-1/2">
+      <div className="w-5/6 mx-auto md:h-2/3">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
