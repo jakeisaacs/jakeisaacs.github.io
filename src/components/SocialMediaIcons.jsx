@@ -1,4 +1,5 @@
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
@@ -14,6 +15,14 @@ const SocialMediaIcons = () => {
                 rel="noreferrer"
             >
                 <LinkedInIcon alt="linkedin-link" />
+            </a>
+            <a
+                className="hover:opacity-50 transition duration-500"
+                href="https://github.com/jakeisaacs"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <GitHubIcon alt="github-link" />
             </a>
             <a
                 className="hover:opacity-50 transition duration-500"
