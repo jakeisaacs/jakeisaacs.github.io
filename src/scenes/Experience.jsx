@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ListBox from "../components/ListBox";
 
 const Experience = () => {
     return (
@@ -21,7 +22,7 @@ const Experience = () => {
                 </div>
             </motion.div>
             <motion.div
-                className="mflex justify-between w-full md:w-2/3 max-w-[850px] h-5/6 mx-auto"
+                className="flex justify-center w-full h-5/6 mx-auto pt-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -31,10 +32,8 @@ const Experience = () => {
                     visible: { opacity: 1, x: 0 }
                 }}
             >
-                <iframe className="flex justify-between w-full h-full mx-auto" 
-                    src="https://docs.google.com/document/d/e/2PACX-1vSDwUwTHgt3nw_wnHd5OVGt2BNJkut1VsOrXUiJzOLppxKvX9yVmwCZ9LVdsg75ETR5HRJgkfYeI_TR/pub?embedded=true" 
-                    title="Resume" 
-                />
+                <ListBox listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
+                <ListBox listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
             </motion.div>
         </section>
     );
