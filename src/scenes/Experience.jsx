@@ -22,7 +22,7 @@ const Experience = () => {
                 </div>
             </motion.div>
             <motion.div
-                className="flex justify-center w-full h-5/6 mx-auto pt-10"
+                className="md:flex justify-center w-full h-full mx-auto py-10"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -32,6 +32,7 @@ const Experience = () => {
                     visible: { opacity: 1, x: 0 }
                 }}
             >
+                <ListBox listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
                 <ListBox listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
                 <ListBox listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
             </motion.div>
