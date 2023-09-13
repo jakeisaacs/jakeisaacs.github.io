@@ -22,7 +22,7 @@ const Landing = ({setSelectedPage}) => {
                 >
                     <img 
                         alt="profile"
-                        className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
+                        className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full
                             max-w-[400px] md:max-w-[600px]"
                         src="./assets/profile-pic.png"
                     />
@@ -30,7 +30,7 @@ const Landing = ({setSelectedPage}) => {
             ) : (
                 <img 
                     alt="profile"
-                    className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full
+                    className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full
                         max-w-[400px] md:max-w-[600px]"
                     src="./assets/profile-pic.png"
                 />
@@ -52,8 +52,8 @@ const Landing = ({setSelectedPage}) => {
                     <p className="text-6xl font-playfair z-10 text-center md:text-start">
                         Jake {""}
                         <span className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-                            xs:before:content-brush before:absolute before:left-[-35px]
-                            before:top-[-120px] before:z-[-1]"
+                            xs:before:content-brush before:absolute before:left-[-50px]
+                            before:top-[-80px] before:z-[-1]"
                         >
                             Isaacs
                         </span>
@@ -76,7 +76,7 @@ const Landing = ({setSelectedPage}) => {
                     }}
                 >
                     <AnchorLink
-                        className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+                        className="bg-gradient-bluesteel text-deep-blue rounded-sm py-3 px-7 font-semibold
                             hover:bg-blue hover:text-white transition duration-500"
                         onClick={() => setSelectedPage("contact")}
                         href="#contact"
@@ -84,12 +84,12 @@ const Landing = ({setSelectedPage}) => {
                         Contact Me
                     </AnchorLink>
                     <AnchorLink
-                        className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+                        className="rounded-r-sm bg-gradient-bluesteel py-0.5 pr-0.5"
                         onClick={() => setSelectedPage("contact")}
                         href="#contact"
                     >
                         <div
-                            className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center
+                            className="bg-deep-blue hover:text-blue transition duration-500 w-full h-full flex items-center
                              justify-center font-playfair px-10"
                         >
                             Let's talk!

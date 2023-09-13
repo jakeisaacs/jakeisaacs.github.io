@@ -19,14 +19,16 @@ module.exports = {
         "gradient-rainbow":
           "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
         "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+          "linear-gradient(13deg, rgba(107,107,107,1) 0%, rgba(148,187,233,1) 50%, rgba(107,107,107,1) 100%)",
+        "gradient-bluesteel":
+          "linear-gradient(90deg, rgba(85,188,242,1) 8%, rgba(81,81,255,1) 49%, rgba(0,212,255,1) 89%)",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"]
       },
       content: {
-        brush: "url('./assets/brush.png')",
+        brush: "url('./assets/TestImg.png')",
         person1: "url('./assets/person-1.png')",
         person2: "url('./assets/person-2.png')",
         person3: "url('./assets/person-3.png')",

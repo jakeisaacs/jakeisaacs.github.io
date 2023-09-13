@@ -1,11 +1,11 @@
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const ListBox = ({listitems}) => {
+const ListBox = ({header, listitems}) => {
 
     return (
-        <div className="grid grid-cols-1 grid-rows-auto grid-flow-row gap-x-5 justify-evenly content-normal p-2 mx-3 w-full h-full bg-translucent-blue shadow shadow-grey text-md rounded">
+        <div className="grid grid-cols-1 grid-rows-auto grid-flow-row gap-x-5 justify-evenly content-normal p-2 m-3 w-full h-full bg-translucent-blue shadow shadow-grey text-md rounded">
             <div className="flex justify-center mx-auto text-lg text-grey font-bold">
-                Programs
+                {header}
             </div>
             {listitems.map((item) => {
                 return (
