@@ -1196,14 +1196,14 @@ body,
   left: 3.5rem;
 }
 
-.before\:left-\[-35px\]::before{
-  content: var(--tw-content);
-  left: -35px;
-}
-
 .before\:left-\[-50\%\]::before{
   content: var(--tw-content);
   left: -50%;
+}
+
+.before\:left-\[-50px\]::before{
+  content: var(--tw-content);
+  left: -50px;
 }
 
 .before\:right-0::before{
@@ -1216,14 +1216,14 @@ body,
   top: 0px;
 }
 
-.before\:top-\[-120px\]::before{
-  content: var(--tw-content);
-  top: -120px;
-}
-
 .before\:top-\[-50\%\]::before{
   content: var(--tw-content);
   top: -50%;
+}
+
+.before\:top-\[-80px\]::before{
+  content: var(--tw-content);
+  top: -80px;
 }
 
 .before\:z-\[-1\]::before{

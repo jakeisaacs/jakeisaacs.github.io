@@ -2,6 +2,27 @@ import { motion } from "framer-motion";
 import ListBox from "../components/ListBox";
 
 const Experience = () => {
+    const experiences = [
+        {
+            "header": "Navarro Research and Engineering, Inc.",
+            "body": [
+                "Developed over 30 automated solutions, reducing process times by over 90% in certain systems. Platforms include Azure, Power Platform, IBM Cognos, PowerShell, Excel. Languages include JavaScript, Python, SQL, VBA, Dax, M, and C#.",
+                "Lead iniative to remediate unmanaged C# Blazor code powered by AWS EC2 by fixing immediate coding issues and directing management to bring back the original developer. \
+                    The organizaiton saw an immediate increase in user satisfaction and reduction in error rates.",
+                "Brought primary and multiple sub-organizations to the cloud, setting new precedents for automation and efficiency in the workplace and reducing manual overhead."
+
+            ]
+        },
+        {
+            "header": "University of Tennessee",
+            "body": ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
+        },
+        {
+            "header": "Isaacs Bowman Investments",
+            "body": ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]
+        }
+    ];
+
     return (
         <section id="experience" className="h-full w-full">
         <motion.div
@@ -32,9 +53,11 @@ const Experience = () => {
                     visible: { opacity: 1, x: 0 }
                 }}
             >
-                <ListBox header="Header1" listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
-                <ListBox header="Header2" listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
-                <ListBox header="Header3" listitems={["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"]} />
+                {experiences.map((exp) => {
+                    return (
+                        <ListBox key={exp['header']} header={exp['header']} listitems={exp['body']} />
+                    )
+                })}
             </motion.div>
         </section>
     );

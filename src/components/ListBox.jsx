@@ -7,13 +7,13 @@ const ListBox = ({header, listitems}) => {
             <div className="flex justify-center mx-auto text-lg text-grey font-bold">
                 {header}
             </div>
-            {listitems.map((item) => {
+            {listitems.map((item, i) => {
                 return (
-                <div className="flex justify-start">
-                    <span class="material-symbols-outlined">
+                <div key={header+i} className="flex justify-start">
+                    <span className="material-symbols-outlined">
                         send
                     </span>
-                    <p className='text-md'>&ensp; {item}</p>
+                    <p className='text-md text-grey'>&ensp; {item}</p>
                 </div>
                 )
             })}

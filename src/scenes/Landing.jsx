@@ -58,7 +58,7 @@ const Landing = ({setSelectedPage}) => {
                             Isaacs
                         </span>
                     </p>
-                    <p className="mt-12 mb-7 text-sm text-center md:text-start">
+                    <p className="pt-5 mt-12 mb-7 text-sm text-center md:text-start">
                         Programming - Analysis - Optimization.
                     </p>
                 </motion.div>
