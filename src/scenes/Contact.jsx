@@ -49,7 +49,7 @@ const Contact = () => {
             >
                 <div>
                     <p className="font-playfair font-semibold text-4xl">
-                        <span className="text-yellow ">CONTACT ME</span>
+                        <span className="text-red ">C</span>ONTACT <span className="text-red ">ME</span>
                     </p>
                     <div className="flex md:justify-end my-5">
 

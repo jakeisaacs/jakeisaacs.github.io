@@ -28,7 +28,7 @@ module.exports = {
         opensans: ["Open Sans", "sans-serif"]
       },
       content: {
-        brush: "url('./assets/TestImg.png')",
+        brush: "url('./assets/cloud.png')",
         person1: "url('./assets/person-1.png')",
         person2: "url('./assets/person-2.png')",
         person3: "url('./assets/person-3.png')",

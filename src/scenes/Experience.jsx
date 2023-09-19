@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ListBox from "../components/ListBox";
+import LineGradient from "../components/LineGradient";
 
 const Experience = () => {
     const experiences = [
@@ -50,13 +51,16 @@ const Experience = () => {
                 }}
             >
                 <div>
-                    <p className="font-playfair font-semibold text-4xl mb-5">
+                    <p className="font-playfair font-semibold text-4xl">
                         <span className="text-red">EXP</span>ERIENCE
                     </p>
+                    <div className="flex justify-center mt-5">
+                        <LineGradient width="w-1/3" />
+                    </div>
                 </div>
             </motion.div>
             <motion.div
-                className="md:flex justify-center w-full h-full mx-auto py-20"
+                className="md:flex justify-center w-full h-full mx-auto pt-10 pb-10 md:pb-20"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
@@ -68,7 +72,7 @@ const Experience = () => {
             >
                 {experiences.map((exp) => {
                     return (
-                        <ListBox key={exp['header']} header={exp['header']} subheader={exp['subheader']} listitems={exp['body']} />
+                        <ListBox key={exp['header']} header={exp['header']} subheader={exp['subheader']} icon="award_star" ncols={1} listitems={exp['body']} />
                     )
                 })}
             </motion.div>

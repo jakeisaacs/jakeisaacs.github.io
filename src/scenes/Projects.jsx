@@ -48,17 +48,14 @@ const Projects = () => {
                     <p className="font-playfair font-semibold text-4xl">
                         <span className="text-red">PRO</span>JECTS
                     </p>
-                    <div className="flex justify-center mt-5">
+                    <div className="flex justify-center my-5">
                         <LineGradient width="w-1/3" />
                     </div>
                 </div>
-                <p className="mt-10 mb-10">
-                    Projects here!
-                </p>
             </motion.div>
 
             {/* PROJECTS */}
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-10">
                 <motion.div
                     className="sm:grid sm:grid-cols-3"
                     initial="hidden"
