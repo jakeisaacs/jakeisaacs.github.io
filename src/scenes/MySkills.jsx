@@ -76,7 +76,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <ListBox key={"programs"} header="Programs" icon="check" ncols={2} listitems={programs} />
+                    <ListBox key={"programs"} header="Programs" icon="check" ncols={isAboveMediumScreens ? 3 : 2} listitems={programs} />
                 </motion.div>
             </div>
 
