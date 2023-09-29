@@ -1,3 +1,4 @@
+import Carousel from "../components/Carousel";
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 
@@ -19,7 +20,7 @@ const Project = ({ title, subtitle = "blah blah blah" }) => {
     const projectTitle = title.split(" ").join("-").toLowerCase();
 
     return (
-        <motion.div variants={projectVariant} className="relative"> 
+        <motion.div variants={projectVariant} className="relative h-full w-full px-5"> 
             <div className={overlayStyles}>
                 <p className="text-2xl font-playfair">{title}</p>
                 <p>{subtitle}</p>
@@ -54,41 +55,30 @@ const Projects = () => {
                 </div>
             </motion.div>
 
-            {/* PROJECTS */}
             <div className="flex justify-center mt-10">
+                <Carousel images={["../assets/Project-1.jpeg", "../assets/Project-2.jpeg", "../assets/Project-3.jpeg"]} />
+            </div>
+
+            {/* PROJECTS */}
+            {/* <div className="flex justify-center mt-10">
                 <motion.div
-                    className="sm:grid sm:grid-cols-3"
+                    className="flex"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
                     variants={container}
                 >
-                    {/* ROW 1 */}
-                    <div
-                        className="flex justify-center text-center items-center p-10 bg-red
-                            max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-                    >
-                        BEAUTIFUL USER INTERFACES
-                    </div>
+
                     <Project title="Project 1" />
                     <Project title="Project 2" />
-
-                    {/* ROW 2 */}
                     <Project title="Project 3" />
                     <Project title="Project 4" />
                     <Project title="Project 5" />
-
-                    {/* ROW 2 */}
                     <Project title="Project 6" />
                     <Project title="Project 7" />
-                    <div
-                        className="flex justify-center text-center items-center p-10 bg-blue
-                            max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-                    >
-                        SMOOTH USER EXPERIENCE
-                    </div>
+
                 </motion.div>
-            </div>
+            </div> */}
 
         </section>
     );

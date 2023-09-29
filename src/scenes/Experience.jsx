@@ -5,7 +5,7 @@ import LineGradient from "../components/LineGradient";
 const Experience = () => {
     const experiences = [
         {
-            "header": "Navarro Research and Engineering, Inc.",
+            "header": "Navarro Research & Engineering",
             "subheader": "Senior Data Analyst",
             "body": [
                 "Developed over 30 automated solutions, reducing process times by over 90% in certain systems. Platforms include Azure, Power Platform, IBM Cognos, PowerShell, Excel. Languages include JavaScript, Python, SQL, VBA, Dax, M, and C#.",

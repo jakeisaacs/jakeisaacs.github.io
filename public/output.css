@@ -628,6 +628,10 @@ video {
   bottom: 0px;
 }
 
+.left-0{
+  left: 0px;
+}
+
 .right-0{
   right: 0px;
 }
@@ -638,6 +642,10 @@ video {
 
 .top-0{
   top: 0px;
+}
+
+.top-1\/2{
+  top: 50%;
 }
 
 .top-\[45\%\]{
@@ -666,6 +674,10 @@ video {
 
 .m-3{
   margin: 0.75rem;
+}
+
+.m-auto{
+  margin: auto;
 }
 
 .mx-auto{
@@ -755,12 +767,12 @@ video {
   height: 11rem;
 }
 
-.h-full{
-  height: 100%;
+.h-\[20px\]{
+  height: 20px;
 }
 
-.max-h-\[400px\]{
-  max-height: 400px;
+.h-full{
+  height: 100%;
 }
 
 .min-h-\[50px\]{
@@ -781,6 +793,10 @@ video {
 
 .w-5\/6{
   width: 83.333333%;
+}
+
+.w-\[20px\]{
+  width: 20px;
 }
 
 .w-\[250px\]{
@@ -847,6 +863,10 @@ video {
   gap: 4rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
@@ -859,17 +879,16 @@ video {
   gap: 2rem;
 }
 
-.gap-x-5{
-  -webkit-column-gap: 1.25rem;
-          column-gap: 1.25rem;
-}
-
 .rounded{
   border-radius: 0.25rem;
 }
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .rounded-sm{
@@ -879,11 +898,6 @@ video {
 .rounded-r-sm{
   border-top-right-radius: 0.125rem;
   border-bottom-right-radius: 0.125rem;
-}
-
-.bg-blue{
-  --tw-bg-opacity: 1;
-  background-color: rgb(44 188 233 / var(--tw-bg-opacity));
 }
 
 .bg-dark-grey{
@@ -906,11 +920,6 @@ video {
   background-color: rgb(59 57 206 / var(--tw-bg-opacity));
 }
 
-.bg-red{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 87 51 / var(--tw-bg-opacity));
-}
-
 .bg-translucent-blue{
   background-color: rgba(34, 68, 160, 0.7);
 }
@@ -926,10 +935,6 @@ video {
 
 .bg-gradient-rainblue{
   background-image: linear-gradient(13deg, rgba(107,107,107,1) 0%, rgba(148,187,233,1) 50%, rgba(107,107,107,1) 100%);
-}
-
-.p-10{
-  padding: 2.5rem;
 }
 
 .p-12{
@@ -962,6 +967,11 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-7{
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -980,11 +990,6 @@ video {
 .py-10{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .py-3{
@@ -1073,11 +1078,6 @@ video {
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1311,16 +1311,6 @@ body,
   .xs\:before\:content-brush::before{
     --tw-content: url('./assets/cloud.png');
     content: var(--tw-content);
-  }
-}
-
-@media (min-width: 768px){
-  .sm\:grid{
-    display: grid;
-  }
-
-  .sm\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
