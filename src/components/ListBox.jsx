@@ -1,10 +1,8 @@
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const ListBox = ({header="", subheader="", icon="send", ncols, listitems}) => {
-    // JIT not working for ncols when passing default in paramater list... inspector will show passed value but cols are showing as default of 1
+    //ncols was not rendering properly... had to add pattern to safelist in tailwind config
     
-    console.log(Math.ceil(listitems.length/ncols));
-    console.log(ncols);
 
     return (
         <div className={`flex flex-col py-5 px-2 m-3 w-full h-full bg-translucent-blue shadow shadow-grey text-md rounded`}>
@@ -16,7 +14,7 @@ const ListBox = ({header="", subheader="", icon="send", ncols, listitems}) => {
                 {subheader}
             </div>
             </div>
-            <div className={`grid grid-cols-${ncols} grid-rows-${Math.ceil(listitems.length/ncols)} grid-flow-row gap-5 justify-evenly w-full h-full`}>
+            <div className={`grid grid-cols-${ncols} grid-rows-auto grid-flow-row gap-5 justify-evenly w-full h-full`}>
             {listitems.map((item, i) => {
                 return (
                 <div key={header+i} className="flex px-5">

@@ -75,7 +75,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-        <div className="relative items-center m-auto rounded">
+      <div className="relative items-center h-2/3 w-2/3 md:h-full md:w-full m-auto rounded">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -92,7 +92,7 @@ const Carousel = ({ images }) => {
           <motion.div
             variants={slidersVariants}
             whileHover="hover"
-            className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-28 -left-64"
+            className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-14 md:top-28 -left-40 md:-left-64"
             onClick={handlePrevious}
           >
             <img className="w-full h-full bg-grey opacity-70 hover:opacity-90" src={images[currentIndex - 1 < 0 ? images.length - 1 : currentIndex - 1]} />
@@ -100,30 +100,12 @@ const Carousel = ({ images }) => {
           <motion.div
             variants={slidersVariants}
             whileHover="hover"
-            className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-28 -right-64"
-            onClick={handlePrevious}
+            className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-14 md:top-28 -right-40 md:-right-64"
+            onClick={handleNext}
           >
             <img className="w-full h-full opacity-70 hover:opacity-90" src={images[currentIndex + 1 === images.length ? 0 : currentIndex + 1]} />
           </motion.div>
         </div>
-        {/* <div className="flex justify-between">
-          <motion.div
-            variants={slidersVariants}
-            whileHover="hover"
-            className="absolute grid place-items-center -left-16 top-1/2 p-1 h-[50px] w-[50px] rounded-full items-center"
-            onClick={handlePrevious}
-          >
-            <NavigateBeforeIcon className="absolute align-center justify-center" style={{fontSize: 60}} />
-          </motion.div>
-          <motion.div
-            variants={slidersVariants}
-            whileHover="hover"
-            className="absolute grid place-items-center -right-16 top-1/2 p-1 h-[50px] w-[50px] rounded-full items-center"
-            onClick={handleNext}
-          >
-            <NavigateNextIcon className="absolute align-center justify-center" style={{fontSize: 60}} />
-          </motion.div>
-        </div> */}
       </div>
       <div className="carousel-indicator">
         {images.map((_, index) => (
