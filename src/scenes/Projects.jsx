@@ -56,7 +56,7 @@ const Projects = () => {
             </motion.div>
 
             <div className="flex justify-center mt-10">
-                <Carousel images={["../assets/Project-1.jpeg", "../assets/Project-2.jpeg", "../assets/Project-3.jpeg"]} />
+                <Carousel images={["../assets/Social-Media-Website.jpg", "../assets/Crazy-Stairs.jpg", "../assets/Galaxy-Shooter.jpg"]} />
             </div>
 
             {/* PROJECTS */}

@@ -50,7 +50,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <ListBox key={"languages"} header="Languages" icon="check" ncols={isAboveMediumScreens ? 3 : 3} listitems={languages} />
+                    <ListBox key={"languages"} header="Languages" icon="check" ncols={isAboveMediumScreens ? 2 : 3} listitems={languages} />
                 </motion.div>
                 <motion.div
                     className="md:w-1/3 mt-10"
@@ -63,7 +63,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <ListBox key={"libraries"} header="Libraries" icon="check" ncols={isAboveMediumScreens ? 3 : 3} listitems={libraries} />
+                    <ListBox key={"libraries"} header="Libraries" icon="check" ncols={isAboveMediumScreens ? 2 : 3} listitems={libraries} />
                 </motion.div>
                 <motion.div
                     className="md:w-1/3 mt-10"
@@ -76,7 +76,7 @@ const MySkills = () => {
                         visible: { opacity: 1, y: 0 }
                     }}
                 >
-                    <ListBox key={"programs"} header="Programs" icon="check" ncols={isAboveMediumScreens ? 3 : 2} listitems={programs} />
+                    <ListBox key={"programs"} header="Programs" icon="check" ncols={isAboveMediumScreens ? 2 : 3} listitems={programs} />
                 </motion.div>
             </div>
 

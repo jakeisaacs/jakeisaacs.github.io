@@ -2,6 +2,9 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const ListBox = ({header="", subheader="", icon="send", ncols, listitems}) => {
     // JIT not working for ncols when passing default in paramater list... inspector will show passed value but cols are showing as default of 1
+    
+    console.log(Math.ceil(listitems.length/ncols));
+    console.log(ncols);
 
     return (
         <div className={`flex flex-col py-5 px-2 m-3 w-full h-full bg-translucent-blue shadow shadow-grey text-md rounded`}>
@@ -23,7 +26,7 @@ const ListBox = ({header="", subheader="", icon="send", ncols, listitems}) => {
                 )
             })}
             </div>
-            </div>
+        </div>
     );
 };
 
