@@ -787,10 +787,6 @@ video {
   height: 100%;
 }
 
-.min-h-\[500px\]{
-  min-height: 500px;
-}
-
 .min-h-\[50px\]{
   min-height: 50px;
 }
@@ -1146,6 +1142,10 @@ video {
 
 .pt-10{
   padding-top: 2.5rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
 }
 
 .pt-5{
