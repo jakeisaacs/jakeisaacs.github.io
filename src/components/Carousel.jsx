@@ -3,12 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-const Carousel = ({ images }) => {
+const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
+  console.log("items: " + items);
+
+  const overlayStyles = `absolute invisible md:visible h-full w-full opacity-0 hover:opacity-90 transition duration-500
         bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+
+  const smallOverlayStyles = `absolute invisible md:visible h-full w-full opacity-0 hover:opacity-90 transition duration-500
+        bg-grey z-30 flex flex-col justify-center items-center text-center p-8 md:p-10 text-md text-deep-blue`;
 
   const slideVariants = {
     hiddenRight: {
@@ -56,7 +61,7 @@ const Carousel = ({ images }) => {
   const handleNext = () => {
     setDirection("right");
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+      prevIndex + 1 === items.length ? 0 : prevIndex + 1
     );
   };
 
@@ -64,7 +69,7 @@ const Carousel = ({ images }) => {
     setDirection("left");
 
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+      prevIndex - 1 < 0 ? items.length - 1 : prevIndex - 1
     );
   };
 
@@ -84,8 +89,11 @@ const Carousel = ({ images }) => {
             exit="exit"
             variants={slideVariants}
           >
-          <div className={overlayStyles}></div>
-          <img src={images[currentIndex]} />
+          <div className={overlayStyles}>
+              <p className="text-2xl font-playfair">{items[currentIndex].title}</p>
+              <p className="text-lg font-playfair">{items[currentIndex].description}</p>
+          </div>
+          <img className="w-full h-full" src={items[currentIndex].path} />
           </motion.div>
         </AnimatePresence>
         <div className="flex justify-between w-full">
@@ -95,7 +103,11 @@ const Carousel = ({ images }) => {
             className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-14 md:top-28 -left-40 md:-left-64"
             onClick={handlePrevious}
           >
-            <img className="w-full h-full bg-grey opacity-70 hover:opacity-90" src={images[currentIndex - 1 < 0 ? images.length - 1 : currentIndex - 1]} />
+            <div className={smallOverlayStyles}>
+              <p className="text-xl font-playfair">{items[currentIndex - 1 < 0 ? items.length - 1 : currentIndex - 1].title}</p>
+              <p className="text-sm font-playfair">{items[currentIndex - 1 < 0 ? items.length - 1 : currentIndex - 1].description}</p>
+            </div>
+            <img className="w-full h-full bg-grey opacity-70 hover:opacity-90" src={items[currentIndex - 1 < 0 ? items.length - 1 : currentIndex - 1].path} />
           </motion.div>
           <motion.div
             variants={slidersVariants}
@@ -103,12 +115,16 @@ const Carousel = ({ images }) => {
             className="absolute grid place-items-center items-center w-1/2 h-1/2 rounded top-14 md:top-28 -right-40 md:-right-64"
             onClick={handleNext}
           >
-            <img className="w-full h-full opacity-70 hover:opacity-90" src={images[currentIndex + 1 === images.length ? 0 : currentIndex + 1]} />
+            <div className={smallOverlayStyles}>
+              <p className="text-xl font-playfair">{items[currentIndex + 1 === items.length ? 0 : currentIndex + 1].title}</p>
+              <p className="text-sm font-playfair">{items[currentIndex + 1 === items.length ? 0 : currentIndex + 1].description}</p>
+            </div>
+            <img className="w-full h-full opacity-70 hover:opacity-90" src={items[currentIndex + 1 === items.length ? 0 : currentIndex + 1].path} />
           </motion.div>
         </div>
       </div>
       <div className="carousel-indicator">
-        {images.map((_, index) => (
+        {items.map((_, index) => (
           <motion.div
             key={index}
             className={`dot ${currentIndex === index ? "active" : ""}`}

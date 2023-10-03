@@ -31,6 +31,27 @@ const Project = ({ title, subtitle = "blah blah blah" }) => {
 };
 
 const Projects = () => {
+
+    const items = [
+        {
+            title: "Social Media Website",
+            description: "A social media website built on MERN stack.",
+            path: "../assets/Social-Media-Website.jpg"
+        },
+        {
+            title: "Crazy Stairs",
+            description: "An endless stair-climbing game designed in Unity.",
+            path: "../assets/Crazy-Stairs.jpg"
+        },
+        {
+            title: "Galaxy Shooter",
+            description: "A space-ship shooter packed with power-ups and enemies developed in Unity.",
+            path: "../assets/Galaxy-Shooter.jpg"
+        },
+    ];
+
+    console.log(items[0])
+
     return (
         <section id="projects" className="pt=48 pb-48">
             {/* HEADINGS */}
@@ -56,29 +77,8 @@ const Projects = () => {
             </motion.div>
 
             <div className="flex justify-center mt-10">
-                <Carousel images={["../assets/Social-Media-Website.jpg", "../assets/Crazy-Stairs.jpg", "../assets/Galaxy-Shooter.jpg"]} />
+                <Carousel items={items} />
             </div>
-
-            {/* PROJECTS */}
-            {/* <div className="flex justify-center mt-10">
-                <motion.div
-                    className="flex"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    variants={container}
-                >
-
-                    <Project title="Project 1" />
-                    <Project title="Project 2" />
-                    <Project title="Project 3" />
-                    <Project title="Project 4" />
-                    <Project title="Project 5" />
-                    <Project title="Project 6" />
-                    <Project title="Project 7" />
-
-                </motion.div>
-            </div> */}
 
         </section>
     );
