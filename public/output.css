@@ -612,6 +612,10 @@ video {
   visibility: visible;
 }
 
+.invisible{
+  visibility: hidden;
+}
+
 .fixed{
   position: fixed;
 }
@@ -1049,6 +1053,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-8{
+  padding: 2rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1170,6 +1178,11 @@ video {
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1411,6 +1424,10 @@ body,
 }
 
 @media (min-width: 1060px){
+  .md\:visible{
+    visibility: visible;
+  }
+
   .md\:-left-64{
     left: -16rem;
   }
@@ -1485,6 +1502,10 @@ body,
 
   .md\:gap-16{
     gap: 4rem;
+  }
+
+  .md\:p-10{
+    padding: 2.5rem;
   }
 
   .md\:pb-20{
