@@ -1,6 +1,7 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
+  "homepage": "https://jakeisaacs.github.io/react-gh-pages",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -23,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "npx tailwindcss -i ./src/index.css -o ./public/output.css && react-scripts start",
     "build": "npx tailwindcss -i ./src/index.css -o ./public/output.css && react-scripts build",
     "test": "react-scripts test",
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "tailwindcss": "^3.3.3"
   }
 }
