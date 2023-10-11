@@ -31,7 +31,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         {isAboveMediumScreens && (
           <DotGroup 
             selectedPage={selectedPage}
@@ -49,7 +49,7 @@ function App() {
         <Projects />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto py-10 md:h-5/6 ">
+      <div className="w-5/6 mx-auto ">
         <Experience />
       </div>
       <LineGradient />

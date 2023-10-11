@@ -38,44 +38,48 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="h-full w-full">
-        <motion.div
-                className="md:w-2/5 mx-auto text-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 3.0 }}
-                variants={{
-                    hidden: { opacity: 0, x: -100 },
-                    visible: { opacity: 1, x: 0 }
-                }}
-            >
-                <div>
-                    <p className="font-playfair font-semibold text-4xl">
-                        <span className="text-red">EXP</span>ERIENCE
-                    </p>
-                    <div className="flex justify-center mt-5">
-                        <LineGradient width="w-1/3" />
-                    </div>
-                </div>
-            </motion.div>
+        <section id="experience" className="pt-10 pb-24">
+        <div className="md:flex md:justify-center md:gap-16 mt-5">
             <motion.div
-                className="md:flex justify-center w-full h-full mx-auto pt-10 pb-10 md:pb-20"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ delay: 0.5, duration: 3.0 }}
-                variants={{
-                    hidden: { opacity: 0, x: -100 },
-                    visible: { opacity: 1, x: 0 }
-                }}
-            >
+                    className="md:w-2/5 mx-auto text-center"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 2.0 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -100 },
+                        visible: { opacity: 1, x: 0 }
+                    }}
+                >
+                    <div>
+                        <p className="font-playfair font-semibold text-4xl">
+                            <span className="text-red">EXP</span>ERIENCE
+                        </p>
+                        <div className="flex justify-center mt-5">
+                            <LineGradient width="w-1/3" />
+                        </div>
+                    </div>
+                </motion.div>
+            </div>
+            <div className="md:flex md:justify-between mt-8 gap-8">
                 {experiences.map((exp) => {
                     return (
-                        <ListBox key={exp['header']} header={exp['header']} subheader={exp['subheader']} icon="award_star" ncols={1} listitems={exp['body']} />
+                        <motion.div
+                            className="md:w-1/3 mt-10"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 0.5, duration: 2.0 }}
+                            variants={{
+                                hidden: { opacity: 0, y: 100 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
+                        >
+                            <ListBox key={exp['header']} header={exp['header']} subheader={exp['subheader']} icon="award_star" ncols={1} listitems={exp['body']} />
+                        </motion.div>
                     )
                 })}
-            </motion.div>
+            </div>
         </section>
     );
 };
