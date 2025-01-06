@@ -94,7 +94,7 @@ const Carousel = ({ items }) => {
               <p className="text-lg font-playfair">{items[currentIndex].description}</p>
           </div>
           <a href={items[currentIndex].link} target="_blank" rel="noreferrer">
-          <img className="w-full h-full" src={items[currentIndex].path} />
+            <img className="w-full h-full" src={items[currentIndex].path} alt={items[currentIndex].path} />
           </a>
           </motion.div>
         </AnimatePresence>
