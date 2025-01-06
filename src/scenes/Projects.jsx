@@ -41,7 +41,8 @@ const Projects = () => {
         {
             title: "Crazy Stairs",
             description: "An endless stair-climbing game designed in Unity.",
-            path: "../assets/Crazy-Stairs.jpg"
+            path: "../assets/Crazy-Stairs.jpg",
+            link: "../builds/Crazy-Stairs/index.html"
         },
         {
             title: "Galaxy Shooter",

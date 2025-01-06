@@ -93,7 +93,9 @@ const Carousel = ({ items }) => {
               <p className="text-2xl font-playfair">{items[currentIndex].title}</p>
               <p className="text-lg font-playfair">{items[currentIndex].description}</p>
           </div>
+          <a href={items[currentIndex].link} target="_blank" rel="noreferrer">
           <img className="w-full h-full" src={items[currentIndex].path} />
+          </a>
           </motion.div>
         </AnimatePresence>
         <div className="flex justify-between w-full">
